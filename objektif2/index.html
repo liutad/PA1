@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> NEGARA BERDAULAT</title>
+    <style>
+        /* Apply a black background color to the body element */
+        body {
+            background-color: black;
+            color: white; /* Text color */
+            font-family: Arial, sans-serif; /* Specify a font for text */
+        }
+
+        /* Style for the question container */
+        .question {
+            background-color: #333; /* Dark gray background for question container */
+            padding: 20px; /* Add padding for better spacing */
+            margin-bottom: 10px; /* Add margin between questions */
+        }
+
+        /* Style for answer choices */
+        .question p {
+            margin: 5px 0; /* Adjust spacing between answer choices */
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+
+        /* Style for selected answer (optional) */
+        .correct {
+            color: green;
+        }
+
+        .wrong {
+            color: red;
+        }
+
+        .correct-choice {
+            background-color: whitesmoke;
+        }
+
+        .wrong-choice {
+            background-color: whitesmoke;
+        }
+    </style>
+    <script>
+        function checkAnswer(questionId, selectedAnswer) {
+            // Define the correct answers for each question
+            var correctAnswers = {
+                "question1": "C",
+                "question2": "D",
+                "question3": "B",
+                "question4": "C",
+                "question5": "A",
+                "question6": "B",
+                "question7": "B",
+                "question8": "A",
+                "question9": "C",
+                "question10": "C",
+                "question11": "C",
+                "question12": "D",
+                "question13": "B",
+                "question14": "C",
+                "question15": "C",
+                "question16": "D",
+                "question17": "C",
+                "question18": "B",
+                "question19": "A",
+                "question20": "D",
+                
+            };
+
+            // Get the correct answer for the current question
+            var correctAnswer = correctAnswers[questionId];
+            const resultElement = document.getElementById(`result${questionId}`); // Use questionId instead of questionNumber
+            const selectedChoice = document.getElementById(selectedAnswer);
+
+            // Check if the selected answer is correct
+            if (selectedAnswer === correctAnswer) {
+                resultElement.textContent = 'Correct!';
+                resultElement.className = 'correct';
+                selectedChoice.className = 'correct-choice'; // Change the color of the selected choice
+            } else {
+                resultElement.textContent = 'Wrong!'; // Change to 'Wrong!'
+                resultElement.className = 'wrong'; // Change to 'wrong'
+                selectedChoice.className = 'wrong-choice'; // Change the color of the selected choice
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>CHOOSE THE CORRECT ANSWERS,U CAN CLICK THE CHOICE !(A,B,C,D)</h1>
+    <!-- Question 1 -->
+    <div class="question" id="question1">
+        <p>1--Yang manakah ciri asas sesebuah negara ?</p>
+           <p onclick="checkAnswer('question1', 'A')">A I. Diterajui oleh parti politik tertentu</p>
+           <p onclick="checkAnswer('question1', 'B')">B II. Ditadbir secara demokrasri berparlimen</p>
+           <p onclick="checkAnswer('question1', 'C')">C III. Diperintah oleh kerajaan yang berdaulat</p>
+           <p onclick="checkAnswer('question1', 'D')">D IV. Diperkukuh oleh sistem ekonomi yang baik</p>
+        <p id="resultquestion1"></p> <!-- Added result element for question 1 -->
+    </div>
+
+        <div class="question" id="question2">
+            <p>2--Yang manakah ciri asas sesebuah negara ?</p>
+            <p>I. Raja yang berdaulat</p>
+            <p>II. Penduduk yang tetap</p>
+            <p>III. Sistem ekonomi yang kukuh</p>
+            <p>IV. Sistem kerajaan yang teratur</p>
+            <p onclick="checkAnswer('question2', 'A')">A I dan II</p>
+            <p onclick="checkAnswer('question2', 'B')">B III dan IV</p>
+            <p onclick="checkAnswer('question2', 'C')">C I,II dan III</p>
+            <p onclick="checkAnswer('question2', 'D')">D II dan IV</p>
+            <p id="resultquestion2"></p> <!-- Added result element for question 2 -->
+        </div>
+
+        <div class="question" id="question3">
+            <p>3--Yang manakah menjadikan Malaysia negara berdaulat ?</p>
+            <p>I. Penduduk yang berbilang kaum</p>
+            <p>II. Parti politik yang memimpin negara</p>
+            <p>III. Keupayaan mengawal hal ehwal dalam negara</p>
+            <p>IV. Perlembagaan Persekutuan yang menjamin kestabilan negara</p>
+            <p onclick="checkAnswer('question3', 'A')">A I dan II</p>
+            <p onclick="checkAnswer('question3', 'B')">B III dan IV</p>
+            <p onclick="checkAnswer('question3', 'C')">C I,II dan III</p>
+            <p onclick="checkAnswer('question3', 'D')">D Semua di atas</p>
+            <p id="resultquestion3"></p> <!-- Added result element for question 3 -->
+        </div>
+
+        <div class="question" id="question4">
+            <p>4--Yang manakah menunjukkan Malaysia ialah sebuah negara yang berdaulat ?</p>
+            <p>I. Sistem pentadbiran yang telus</p>
+            <p>II. Bebas daripada pengaruh dan tekanan kuasa asing</p>
+            <p>III. Identiti kebangsaan yang berteraskan Rukun Negara</p>
+            <p>IV. Kepimpinan negara yang berwawasan dan berkarisma</p>
+            <p onclick="checkAnswer('question4', 'A')">A I dan II</p>
+            <p onclick="checkAnswer('question4', 'B')">B III dan IV</p>
+            <p onclick="checkAnswer('question4', 'C')">C II dan III</p>
+            <p onclick="checkAnswer('question4', 'D')">D II dan IV</p>
+            <p id="resultquestion4"></p> <!-- Added result element for question 4 -->
+        </div>
+
+        <div class="question" id="question5">
+            <p>5--Yang manakah pernyataan yang benar tentang konsep negara berdaulat ?</p>
+            <p>I. Mempunyai identitinya tersendiri</p>
+            <p>II. Mempunyai penduduk yang tetap</p>
+            <p>III. Mempunyai institusi pemerintahan yang berkesan</p>
+            <p>IV. Mempunyai hubungan diplomatik dengan kuasa luar</p>
+            <p onclick="checkAnswer('question5', 'A')">A I dan II</p>
+            <p onclick="checkAnswer('question5', 'B')">B III dan IV</p>
+            <p onclick="checkAnswer('question5', 'C')">C II dan III</p>
+            <p onclick="checkAnswer('question5', 'D')">D I dAN IV</p>
+            <p id="resultquestion5"></p> <!-- Added result element for question 5 -->
+        </div>
+
+    <div class="question" id="question6">
+        <p>6--Yang manakah pernyataan menunjukkan Malaysia sebuah negara yang berdaulat ?</p>
+           <p onclick="checkAnswer('question6', 'A')">A I. Penduduk mempunyai jati diri yang tinggi</p>
+           <p onclick="checkAnswer('question6', 'B')">B II. Negara diiktiraf oleh komuniti antarabangsa</p>
+           <p onclick="checkAnswer('question6', 'C')">C III. Kuasa politik berdasarkan tolak ansur pelbagai kaum</p>
+           <p onclick="checkAnswer('question6', 'D')">D IV. Ekonomi negara dikongsi bersama oleh pelbagai kaum</p>
+        <p id="resultquestion6"></p> <!-- Added result element for question  6-->
+    </div>
+
+    <div class="question" id="question7">
+        <p>7--Asas sesebuah negara ialah</p>
+           <p onclick="checkAnswer('question7', 'A')">A I. Hubungan luar</p>
+           <p onclick="checkAnswer('question7', 'B')">B II. Penduduk tetap</p>
+           <p onclick="checkAnswer('question7', 'C')">C III. Kestabilan ekonomi</p>
+           <p onclick="checkAnswer('question7', 'D')">D IV. Pemerintahan demokrasi</p>
+        <p id="resultquestion7"></p> <!-- Added result element for question 7 -->
+    </div>
+
+    <div class="question" id="question8">
+        <p>8--"Adanya penduduk tetap" perkara ini merujuk kepada</p>
+           <p onclick="checkAnswer('question8', 'A')">A I. Konsep negara</p>
+           <p onclick="checkAnswer('question8', 'B')">B II. Sistem kerajaan</p>
+           <p onclick="checkAnswer('question8', 'C')">C III. Kedaulatan negara</p>
+           <p onclick="checkAnswer('question8', 'D')">D IV. Kerajaan persekutuan</p>
+        <p id="resultquestion8"></p> <!-- Added result element for question 8 -->
+    </div>
+
+    <div class="question" id="question9">
+        <p>9--Malaysia dikatakan sebuah negara yang berdaulat kerana mempunyai</p>
+           <p onclick="checkAnswer('question9', 'A')">A I. Wawasan</p>
+           <p onclick="checkAnswer('question9', 'B')">B II. Sempadan yang luas</p>
+           <p onclick="checkAnswer('question9', 'C')">C III. Mempunyai jalur gemilang</p>
+           <p onclick="checkAnswer('question9', 'D')">D IV. Rakyat yang berbilang kaum</p>
+        <p id="resultquestion9"></p> <!-- Added result element for question 9 -->
+    </div>
+
+    <div class="question" id="question10">
+        <p>10--Kenyataan berikut menunjukkan Malaysia sebagai sebuah negara berdaulat, kecuali</p>
+           <p onclick="checkAnswer('question10', 'A')">A I. Malaysia bebas daripada kuasa penjajah</p>
+           <p onclick="checkAnswer('question10', 'B')">B II. Mempunyai rukun negara, jalur gemilang, jata negara</p>
+           <p onclick="checkAnswer('question10', 'C')">C III. Mengamalkan dasar tutup pintu</p>
+           <p onclick="checkAnswer('question10', 'D')">D IV. Menjalankan aktiviti import dan eksport bersama negara luar</p>
+        <p id="resultquestion10"></p> <!-- Added result element for question 10 -->
+    </div>
+
+    <div class="question" id="question11">
+        <p>11--Yang manakah merupakan simbol kedaulatan negara?</p>
+           <p onclick="checkAnswer('question11', 'A')">A I. Parlimen</p>
+           <p onclick="checkAnswer('question11', 'B')">B II. Perlembagaan</p>
+           <p onclick="checkAnswer('question11', 'C')">C III. Lagu Kebangsaan</p>
+           <p onclick="checkAnswer('question11', 'D')">D IV. Pengasingan Kuasa</p>
+        <p id="resultquestion11"></p> <!-- Added result element for question 11 -->
+    </div>
+
+    <div class="question" id="question12">
+        <p>12--Yang manakah tujuan amalan doktrin pengasingan kuasa?</p>
+        <p>I. Mewujudkan sistem kerajaan yang teratur</p>
+        <p>II. Membentuk sistem pentadbiran yang cekap</p>
+        <p>III. Menggariskan bidang tanggungjawab kerajaan</p>
+        <p>IV. Menentukan bidang tanggungjawab kerajaan Persekutuan</p>
+           <p onclick="checkAnswer('question12', 'A')">A I dan II</p>
+           <p onclick="checkAnswer('question12', 'B')">B II dan IV</p>
+           <p onclick="checkAnswer('question12', 'C')">C III dan II</p>
+           <p onclick="checkAnswer('question12', 'D')">D I </p>
+        <p id="resultquestion12"></p> <!-- Added result element for question 12 -->
+    </div>
+
+    <div class="question" id="question13">
+        <p>13--Yang manakah sebab utama pembentukan Malaysia?</p>
+           <p>I. membendung ancaman komunis</p>
+           <p>II. mewujudkan zon ekonomi yang kukuh di Asia Tenggara</p>
+           <p>III. mempercepatkan proses kemerdekaan negara-negara anggota</p>
+           <p>IV. meningkatkan kerjasama dan perkongsian kebudayaan antara penduduk</p>
+           <p onclick="checkAnswer('question13', 'A')">I dan II</p>
+           <p onclick="checkAnswer('question13', 'B')">I dan III</p>
+           <p onclick="checkAnswer('question13', 'C')">III dan IV</p>
+           <p onclick="checkAnswer('question13', 'D')">IV dan II</p>
+        <p id="resultquestion13"></p> <!-- Added result element for question 13 -->
+    </div>
+
+    <div class="question" id="question14">
+        <p>14--Yang manakah ciri sebuah negara?</p>
+           <p>I. Perlembagaan yang utuh</p>
+           <p>II. Simbol kenegaraan yang jelas</p>
+           <p>III. Sempadan negara yang diakui</p>
+           <p>IV. Ketua kerajaan dipilih oleh rakyat</p>
+           <p onclick="checkAnswer('question1', 'A')">I dan II</p>
+           <p onclick="checkAnswer('question14', 'B')">II dan III</p>
+           <p onclick="checkAnswer('question14', 'C')">III dan I</p>
+           <p onclick="checkAnswer('question14', 'D')">IV dan II</p>
+        <p id="resultquestion14"></p> <!-- Added result element for question 14 -->
+    </div>
+
+    <div class="question" id="question15">
+        <p>15--Yang manakah benar tentang konsep kerajaan Konfederasi?</p>
+           <p onclick="checkAnswer('question15', 'A')">A I. Kuasa kerajaan Pusat dan kuasa kerajaan negeri adalah seimbang</p>
+           <p onclick="checkAnswer('question15', 'B')">B II. Kerajaan negeri mempunyai bidang kuasa tertentu yang berbeza dengan kuasa kerajaan Pusat</p>
+           <p onclick="checkAnswer('question15', 'C')">C III. Kuasa pemerintahan kerajaan Pusat amat terhad dan kebanyakan kuasa dipegang oleh kerajaan negeri</p>
+           <p onclick="checkAnswer('question15', 'D')">D IV. Kerajaan Pusat mempunyai kuasa autonomi manakala kerajaan negeri mempunyai kuasa yang lebih rendah</p>
+        <p id="resultquestion15"></p> <!-- Added result element for question 15 -->
+    </div>
+
+    <div class="question" id="question16">
+        <p>16--Yang manakah menerangkan konsep pembahagian kuasa?</p>
+           <p onclick="checkAnswer('question16', 'A')">A I. Mengutamakan pembahagian kuasa dalam sistem pentadbiran kerajaan secara jelas</p>
+           <p onclick="checkAnswer('question16', 'B')">B II. Setiap badan yang terdapat dalam sistem kerajaan melaksanakan tanggungjawab secara berasingan</p>
+           <p onclick="checkAnswer('question16', 'C')">C III. Badan perundangan persekutuan melaksanakan tanggungjawab yang berlainan dengan badan perundangan negeri</p>
+           <p onclick="checkAnswer('question16', 'D')">D IV. Setiap peringkat kerajaan melaksanakan tanggungjawab berasaskan senarai kuasa yang diperuntukkan perlembagaan</p>
+        <p id="resultquestion16"></p> <!-- Added result element for question 16 -->
+    </div>
+
+    <div class="question" id="question17">
+        <p>17-- Yang manakah merupakan ciri corak kerajaan demokrasi di Malaysia?</p>
+           <p onclick="checkAnswer('question17', 'A')">A I. Kerajaan ditentukan oleh Parlimen</p>
+           <p onclick="checkAnswer('question17', 'B')">B II. Mengamalkan demokrasi berperlembagaan</p>
+           <p onclick="checkAnswer('question17', 'C')">C III. Mengamalkan sistem demokrasi berparlimen</p>
+           <p onclick="checkAnswer('question17', 'D')">D IV. Pilihan raya dilaksanakan tertakluk kepada keperluan</p>
+        <p id="resultquestion17"></p> <!-- Added result element for question 17 -->
+    </div>
+
+    <div class="question" id="question18">
+        <p>18--Yang manakah merupakan bentuk amalan kerajaan di Malaysia?</p>
+           <p onclick="checkAnswer('question18', 'A')">A I. Kerajaan Kesatuan</p>
+           <p onclick="checkAnswer('question18', 'B')">B II. Raja Berperlembagaan</p>
+           <p onclick="checkAnswer('question18', 'C')">C III. Demokrasi pilihan raya</p>
+           <p onclick="checkAnswer('question18', 'D')">D IV. Keistimewaan perlembagaan</p>
+        <p id="resultquestion18"></p> <!-- Added result element for question 18 -->
+    </div>
+
+    <div class="question" id="question19">
+        <p>19--Yang manakah menerangkan tentang konsep kerajaan Kesatuan?</p>
+           <p onclick="checkAnswer('question19', 'A')">A I. Kuasa pemerintahan kerajaan Pusat boleh mengatasi kuasa pemerintahan kerajaan negeri</p>
+           <p onclick="checkAnswer('question19', 'B')">B II. Kuasa kerajaan Pusat hendaklah dirujuk oleh kerajaan negeri dan kerajaan tempatan</p>
+           <p onclick="checkAnswer('question19', 'C')">C III. Kerajaan Pusat mempunyai kuasa autonomi manakala kerajaan negeri mempunyai kuasa yang lebih rendah</p>
+           <p onclick="checkAnswer('question19', 'D')">D IV. Kuasa kerajaan Pusat terletak sepenuhnya dalam tangan raja manakala kerajaan negeri berkuasa dalam bidang tertentu</p>
+        <p id="resultquestion19"></p> <!-- Added result element for question 19 -->
+    </div>
+
+    <div class="question" id="question20">
+        <p>20--Yang manakah merujuk ciri konsep asas sebuah negara</p>
+        <p>I. Raja berdaulat</p>
+        <p>II. Penduduk yang tetap</p>
+        <p>III. Sistem ekonomi yang mantap</p>
+        <p>IV. Sistem kerajaan yang tersusun</p>
+        <p onclick="checkAnswer('question20', 'A')">A I dan II</p>
+        <p onclick="checkAnswer('question20', 'B')">B III dan IV</p>
+        <p onclick="checkAnswer('question20', 'C')">C I,II dan III</p>
+        <p onclick="checkAnswer('question20', 'D')">D II dan iv</p>
+        <p id="resultquestion20"></p> <!-- Added result element for question 20 -->
+    </div>
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+    
+    
+    <LINK>https://quizizz.com/admin/quiz/5fb47f6a108ae6001bab0336/negara-berdaulat?fromSearch=true&source=null</LINK>
